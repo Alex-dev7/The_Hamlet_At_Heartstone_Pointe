@@ -1,3 +1,5 @@
+import ThemeButton from "./ThemeButton";
+
 export default function Nav(){
     return (
         <nav>
@@ -7,6 +9,7 @@ export default function Nav(){
             <a href="#">
                 Contact
             </a>
+            <ThemeButton />
         </nav>
     )
 }
