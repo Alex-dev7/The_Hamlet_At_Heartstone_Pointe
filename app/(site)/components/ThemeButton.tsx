@@ -18,7 +18,7 @@ function ThemeButton() {
   return (
     <button
     onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-    className="absolute right-5" 
+    className="absolute right-5 z-50" 
     >{resolvedTheme === 'dark' ? (
         "light"
     ) : (

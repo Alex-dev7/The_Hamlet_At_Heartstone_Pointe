@@ -2,8 +2,10 @@ import ThemeButton from "./ThemeButton";
 
 export default function Nav(){
     return (
-        <nav className="w-full h-14 border-b-1 flex justify-center gap-10 place-items-center transition-all duration-200 fixed">
-            <a href="#">
+        <nav className="h-[60px] w-full px-10 bg-[#7e9fab32] z-30 flex  justify-center gap-10 place-items-center -translate-y-50  transition-all duration-200 fixed  ">
+            <a href="#"
+            className=""
+            >
                 About
             </a>
             <a href="#">
