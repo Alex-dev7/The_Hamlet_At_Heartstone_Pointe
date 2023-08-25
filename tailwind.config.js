@@ -6,6 +6,11 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   darkMode: 'class',
-  theme: {},
+  theme: {
+    // fontFamily:{
+    //   'Expletus Sans': ['Expletus Sans', 'cursive']
+    // }
+  },
   plugins: [],
+  
 }

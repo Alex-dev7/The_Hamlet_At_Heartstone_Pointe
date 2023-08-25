@@ -42,27 +42,30 @@ export default function RootLayout({
 
         
               <AnimatePresence>
-                <body className={`${inter.className} bg-white text-black dark:bg-gray-900 dark:text-white h-full selection:bg-gray-50`}>
+                <body className={`${inter.className} bg-[#7e9fab42] text-black dark:bg-gray-900 dark:text-white  selection:bg-gray-50`}>
               {loading ? (
               <motion.div key='loader'>
                 <Loader setLoading={setLoading} />
               </motion.div>
             ) : (
               <Providers>
-                {/* <Nav/> */}
+                <Nav/>
                 <Banner/>
                 {!loading && (
-              <div className='transition-image final translate-y-[25%]'>
+              <div className='transition-image final translate-y-[25%] '>
                 <motion.img
-                  transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
+                  transition={{ ease: [0.6, 0.03, -0.05, 0.9], duration: 2.0 }}
                   src={`/image-2.jpg`}
                   layoutId='main-image-1'
-                  className='w-[85vw] h-[60vh] mx-auto object-cover '
+                  className='w-[85vw] h-[60vh] mx-auto object-cover duration-0'
                 />
               </div>
             )}
                 <main>
                     {children}
+                    <p>
+                      kgjdlfgkhgdksfg
+                    </p>
                 </main>
                 <Contact/>
               </Providers>

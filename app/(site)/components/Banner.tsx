@@ -27,18 +27,16 @@ const letterAni = {
 };
 
 const Banner = () => {
-//   const [playMarquee, setPlayMarquee] = useState(false);
 
-//   useEffect(() => {
-//     setTimeout(() => {
-//       setPlayMarquee(true);
-//     }, 2000);
-//   }, []);
   return (
-    <motion.div className='banner flex flex-col z-50 relative h-[30vh]' variants={banner}>
+    <motion.div className='banner flex flex-col z-50 relative h-[25vh]' variants={banner}>
       <BannerRowTop title={"THE HAMLET"} />
-      <BannerRowCenter title={"at HEARTSTONE "}  />
-      <BannerRowBottom title={"POINTE"} />
+      <div className="flex ">
+        <BannerRowAt title={"at"}  />
+        <BannerRowCenter title={" HEARTSTONE "}  />
+        <BannerRowBottom title={"POINTE"} />        
+      </div>
+
     </motion.div>
   );
 };
@@ -52,7 +50,7 @@ const AnimatedLetters = ({ title, disabled }) => (
     {[...title].map((letter, i) => (
       <motion.span
       key={i}
-        className='row-letter  whitespace-nowrap font-[200]  tracking-tighter  drop-shadow-xl shadow-black'
+        className='row-letter  whitespace-nowrap font-[200]  tracking-tighter  drop-shadow-xl shadow-black font-Expletus Sans'
         variants={disabled ? {} : letterAni}>
         {letter}
       </motion.span>
@@ -76,7 +74,7 @@ const BannerRowTop = ({ title }) => {
         }}
         className='row-col  flex content-center justify-center  w-[50%]'>
             <span>
-                Something in here
+                {/* Something in here */}
             </span>
       </motion.div>
     </div>
@@ -85,13 +83,13 @@ const BannerRowTop = ({ title }) => {
 
 const BannerRowBottom = ({ title }) => {
   return (
-    <div className={"banner-row center  text-[5rem] ml-[10rem]"}>
+    <div className={"banner-row center  text-[4rem] ml-[2rem]"}>
       <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ ease: [0.6, 0.01, -0.05, 0.95], duration: 1, delay: 1 }}
-        className='scroll '>
-        {/* <motion.span
+        initial={{ scale: 0, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ ease: "circInOut", duration: 1, delay: 1 }}
+        className='text-[1rem]  w-[100px] h-[100px] flex place-items-center justify-center gap-1  rounded-full absolute left-20 top-[70vh] bg-white cursor-pointer hover:border-2 hover:bg-[#869AA1] hover:text-white transition-color duration-200  dark:text-black dark:hover:text-white'>
+        <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
@@ -100,8 +98,8 @@ const BannerRowBottom = ({ title }) => {
             delay: 1.8,
           }}>
           scroll
-        </motion.span> */}
-        {/* <motion.span
+        </motion.span>
+        <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
@@ -110,28 +108,42 @@ const BannerRowBottom = ({ title }) => {
             delay: 1.8,
           }}>
           down
-        </motion.span> */}
+        </motion.span>
       </motion.div>
       <AnimatedLetters title={title} disabled={undefined} />
     </div>
   );
 };
 
-const BannerRowCenter = ({ title, playMarquee }) => {
+const BannerRowAt= ({ title }) => {
   return (
-    <div className={`banner-row  marquee ml-[5rem]   ${playMarquee && "animate"}`}>
+    <div className={`banner-row  ml-[20%] `}>
       <motion.div
         initial={{ y: 310 }}
         animate={{ y: 0 }}
         transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}
-        className='marquee__inner text-[5rem] '>
-        {/* <AnimatedLetters title={title} disabled /> */}
+        className='marquee__inner text-[4rem] '
+        >
         <AnimatedLetters title={title} disabled={undefined} />
-        {/* <AnimatedLetters title={title} disabled /> */}
-        {/* <AnimatedLetters title={title} disabled /> */}
       </motion.div>
     </div>
   );
 };
+const BannerRowCenter = ({ title, playMarquee }) => {
+    return (
+      <div className={`banner-row  marquee ml-[2rem]   ${playMarquee && "animate"}`}>
+        <motion.div
+          initial={{ y: 310 }}
+          animate={{ y: 0 }}
+          transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}
+          className='marquee__inner text-[4rem] '>
+          {/* <AnimatedLetters title={title} disabled /> */}
+          <AnimatedLetters title={title} disabled={undefined} />
+          {/* <AnimatedLetters title={title} disabled /> */}
+          {/* <AnimatedLetters title={title} disabled /> */}
+        </motion.div>
+      </div>
+    );
+  };
 
 export default Banner;
