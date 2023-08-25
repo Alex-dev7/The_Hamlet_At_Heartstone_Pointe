@@ -1,5 +1,5 @@
 "use client"
-import { motion } from "framer-motion";
+import { easeIn, easeInOut, easeOut, motion } from "framer-motion";
 
 import Image from "next/image";
 
@@ -19,7 +19,7 @@ const item = {
     opacity: 1,
     y: 0,
     transition: {
-      ease: "easeInOut",
+      ease: easeIn,
       duration: 1.6,
     },
   },
@@ -27,7 +27,7 @@ const item = {
     opacity: 0,
     y: -200,
     transition: {
-      ease: "easeInOut",
+      ease: easeInOut,
       duration: 0.8,
     },
   },
@@ -39,7 +39,7 @@ const itemMain = {
     opacity: 1,
     y: 0,
     transition: {
-      ease: 0.6,
+      ease: easeOut,
       
       duration: 1.6,
     },
@@ -58,15 +58,16 @@ const Loader = ({ setLoading }) => {
           className="loader-inner"
         >
           <ImageBlock variants={item} id="image-1" />
-          {/* <motion.div variants={itemMain} className="transition-image flex align-middle justify-center content-center">
+          <motion.div variants={itemMain} className="transition-image w-fit  flex mx-auto mt-[30vh]">
             <motion.img
+              className="align-middle"
               layoutId="main-image-1"
               src={`/image-2.jpg`}
-              
+              alt="random alt"
               width={400}
               height={300}
             />
-          </motion.div> */}
+          </motion.div>
           <ImageBlock variants={item} id="image-3" />
           <ImageBlock variants={item} id="image-4" />
           <ImageBlock variants={item} id="image-5" />

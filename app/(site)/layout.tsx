@@ -38,23 +38,34 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       
       <body className={`${inter.className} bg-white text-black dark:bg-gray-900 dark:text-white h-full selection:bg-gray-50`}>
+
         
-          <AnimatePresence>
-          {loading ? (
-          <motion.div key='loader'>
-            <Loader setLoading={setLoading} />
-          </motion.div>
-        ) : (
-          <Providers>
-            <Nav/>
-            <main>
-                {children}
-            </main>
-            <Contact/>
-          </Providers>
-        )}
-          </AnimatePresence>
-       
+              <AnimatePresence>
+              {loading ? (
+              <motion.div key='loader'>
+                <Loader setLoading={setLoading} />
+              </motion.div>
+            ) : (
+              <Providers>
+                <Nav/>
+                {!loading && (
+              <div className='transition-image final'>
+                <motion.img
+                  transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
+                  src={`/image-2.jpg`}
+                  layoutId='main-image-1'
+                />
+              </div>
+            )}
+                <main>
+                    {children}
+                </main>
+                <Contact/>
+              </Providers>
+            )}
+              </AnimatePresence>            
+         
+
         </body>
       
     </html>
