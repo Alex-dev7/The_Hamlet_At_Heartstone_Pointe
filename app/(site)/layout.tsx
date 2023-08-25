@@ -9,6 +9,7 @@ import { Providers } from './components/Providers'
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Loader from './components/Loader'
+import Banner from './components/Banner'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -25,7 +26,7 @@ export default function RootLayout({
 }) {
 
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     loading
@@ -37,23 +38,26 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       
-      <body className={`${inter.className} bg-white text-black dark:bg-gray-900 dark:text-white h-full selection:bg-gray-50`}>
+      
 
         
               <AnimatePresence>
+                <body className={`${inter.className} bg-white text-black dark:bg-gray-900 dark:text-white h-full selection:bg-gray-50`}>
               {loading ? (
               <motion.div key='loader'>
                 <Loader setLoading={setLoading} />
               </motion.div>
             ) : (
               <Providers>
-                <Nav/>
+                {/* <Nav/> */}
+                <Banner/>
                 {!loading && (
-              <div className='transition-image final'>
+              <div className='transition-image final translate-y-[25%]'>
                 <motion.img
                   transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1.6 }}
                   src={`/image-2.jpg`}
                   layoutId='main-image-1'
+                  className='w-[85vw] h-[60vh] mx-auto object-cover '
                 />
               </div>
             )}
@@ -63,10 +67,11 @@ export default function RootLayout({
                 <Contact/>
               </Providers>
             )}
+            </body>
               </AnimatePresence>            
          
 
-        </body>
+        
       
     </html>
   )
