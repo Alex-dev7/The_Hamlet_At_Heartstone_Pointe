@@ -1,9 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&family=Libre+Franklin&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
 
 
 :root {
@@ -41,6 +42,10 @@ body.loading {
   width: 400px;
   left: 16%;
   bottom: 14%;
+}
+
+.row-letter {
+  font-family: 'Expletus Sans' ;
 }
 
 @media (max-width: 400px) {

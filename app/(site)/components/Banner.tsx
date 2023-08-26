@@ -6,7 +6,7 @@ const banner = {
   animate: {
     y: 100,
     transition: {
-      delayChildren: 0.4,
+      delayChildren: 0.2,
       staggerChildren: 0.1,
     },
   },
@@ -14,13 +14,13 @@ const banner = {
 
 const letterAni = {
 
-  initial: { y: 200,  opacity: 0 },
+  initial: { y: 300,  opacity: 0 },
   animate: {
     y: 0,
    opacity: 1,
     transition: {
       ease: 'easeInOut',
-      duration: 0.4,
+      duration: 0.1,
       
     },
   },
@@ -29,7 +29,7 @@ const letterAni = {
 const Banner = () => {
 
   return (
-    <motion.div className='banner flex flex-col z-20 relative h-[25vh] mb-5' variants={banner}>
+    <motion.div className='banner flex flex-col z-20 relative h-[40vh] ' variants={banner}>
       <BannerRowTop title={"THE HAMLET"} />
       <div className="flex ">
         <BannerRowAt title={"at"}  />
@@ -50,7 +50,7 @@ const AnimatedLetters = ({ title, disabled }) => (
     {[...title].map((letter, i) => (
       <motion.span
       key={i}
-        className='row-letter  whitespace-nowrap font-[200]  tracking-tighter  drop-shadow-xl shadow-black overflow-hidden'
+        className='row-letter  whitespace-nowrap font-[400]  -tracking-wide  drop-shadow-xl shadow-black overflow-hidden'
         variants={disabled ? {} : letterAni}>
         {letter}
       </motion.span>
@@ -61,7 +61,7 @@ const AnimatedLetters = ({ title, disabled }) => (
 const BannerRowTop = ({ title }) => {
   return (
     <div className={"banner-row flex"}>
-      <div className='row-col flex content-center justify-center  text-[5rem]  ml-5'>
+      <div className='row-col flex content-center justify-center  text-[5rem]  ml-5 mt-5'>
         <AnimatedLetters title={title} disabled={undefined} />
       </div>
       <motion.div
@@ -72,9 +72,9 @@ const BannerRowTop = ({ title }) => {
           duration: 1,
           delay: 0.4,
         }}
-        className='  flex content-center justify-center  w-[50%]'>
+        className='  flex content-center justify-center  w-auto'>
             <span>
-                {/* Something in here */}
+            
             </span>
       </motion.div>
     </div>

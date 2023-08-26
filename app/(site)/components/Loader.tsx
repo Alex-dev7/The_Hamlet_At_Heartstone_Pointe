@@ -19,7 +19,7 @@ const item = {
     opacity: 1,
     y: 0,
     transition: {
-      ease: 'easeIn',
+      ease: 'easeInOut',
       duration: 1.6,
     },
   },
@@ -28,7 +28,8 @@ const item = {
     y: -200,
     transition: {
       ease: 'easeOut',
-      duration: 0.8,
+      
+      duration: 1,
     },
   },
 };
@@ -55,7 +56,7 @@ const Loader = ({ setLoading}) => {
           initial="hidden"
           animate="show"
           exit="exit"
-          className="loader-inner"
+          className="loader-inner  "
         >
           <ImageBlock variants={item} id="image-1" />
           <motion.div variants={itemMain} className="transition-image w-fit  flex mx-auto mt-[30vh] object-cover ">

@@ -36,28 +36,32 @@ export default function RootLayout({
 
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning >
       
       
-
+ <body className={`${inter.className} bg-[#7e9fab42]  text-black dark:bg-gray-900 dark:text-white  selection:bg-gray-50 h-auto`}>
         
-              <AnimatePresence>
-                <body className={`${inter.className} bg-[#7e9fab42]  text-black dark:bg-gray-900 dark:text-white  selection:bg-gray-50`}>
+             <AnimatePresence>  
+               
+                 
               {loading ? (
-              <motion.div key='loader'>
+                
+              <motion.div key='loader' className='h-full w-full absolute  dark:bg-gray-900  '>
                 <Loader setLoading={setLoading} />
               </motion.div>
             ) : (
+
               <Providers>
                 <Nav/>
                 <Banner/>
                 {!loading && (
-              <div className=' final translate-y-[25%] w-full'>
+                  // translate-y-[25%] w-full
+              <div className=' final block top-[-128px] -z-20 '>
                 <motion.img
-                  transition={{ ease: "anticipate", duration: 2.0 }}
+                  transition={{ ease: "anticipate", duration: 1.6}}
                   src={`/image-2.jpg`}
                   layoutId='main-image-1'
-                  className='w-[85vw] h-[80vh] mx-auto object-cover duration-0 '
+                  className='w-[85vw] h-[80vh] mx-auto object-cover '
                 />
               </div>
             )}
@@ -66,10 +70,12 @@ export default function RootLayout({
                 </main>
                 <Contact/>
               </Providers>
+              
             )}
-            </body>
-              </AnimatePresence>            
-         
+           
+          
+             </AnimatePresence>              
+           </body>
 
         
       
