@@ -33,24 +33,24 @@ const Banner = () => {
       <BannerRowTop title={"THE HAMLET"} />
       <div className="flex ">
         <BannerRowAt title={"at"}  />
-        <BannerRowCenter title={" HEARTSTONE "}  />
-        <BannerRowBottom title={"POINTE"} />        
+        <BannerRowCenter title={" HEARTHSTONE "}  />
+         <BannerRowBottom title={"pointe"} />      
       </div>
-
+         
     </motion.div>
   );
 };
 
 const AnimatedLetters = ({ title, disabled }) => (
   <motion.span
-    className='row-title flex   gap-5 font-[600] opacity-100 overflow-hidden '
+    className='row-title flex   gap-5  opacity-100 overflow-hidden '
     variants={disabled ? {} : banner}
     initial='initial'
     animate='animate'>
     {[...title].map((letter, i) => (
       <motion.span
       key={i}
-        className='row-letter  whitespace-nowrap font-[400]  -tracking-wide  drop-shadow-xl shadow-black overflow-hidden'
+        className='row-letter  whitespace-nowrap font-[400]  -tracking-wide  drop-shadow-xl shadow-blue-900 overflow-hidden'
         variants={disabled ? {} : letterAni}>
         {letter}
       </motion.span>

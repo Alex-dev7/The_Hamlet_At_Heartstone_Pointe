@@ -10,9 +10,12 @@ import { useEffect, useState } from "react";
 import Loader from './components/Loader'
 import Banner from './components/Banner'
 import Footer from './components/Footer'
+import { usePathname } from 'next/navigation' 
 
 
 const inter = Inter({ subsets: ['latin'] })
+
+
 
 // export const metadata: Metadata = {
 //   title: 'Create Next App',
@@ -25,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-
+  const pathname = usePathname()
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -53,9 +56,9 @@ export default function RootLayout({
 
               <Providers>
                 <Nav/>
-                <Banner/>
-                {!loading && (
-                  // translate-y-[25%] w-full
+                 <Banner/>
+         
+               { !loading && pathname === "/" ? (
               <div className=' final block -z-20 '>
                 <motion.video
                   transition={{ ease: "anticipate", duration: 1.6}}
@@ -65,7 +68,7 @@ export default function RootLayout({
                   className='w-[85vw] h-[80vh] mx-auto object-cover '
                 ></motion.video>
               </div>
-            )}
+             )  : <></> }
         
                 <main >
                     {children}
