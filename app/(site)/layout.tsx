@@ -4,13 +4,12 @@ import '../globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Nav from './components/Nav'
-import Contact from './components/Contact'
 import { Providers } from './components/Providers'
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Loader from './components/Loader'
 import Banner from './components/Banner'
-import About from './components/About'
+import Footer from './components/Footer'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -67,11 +66,11 @@ export default function RootLayout({
                 ></motion.video>
               </div>
             )}
-              <About />
+        
                 <main >
                     {children}
                 </main>
-                <Contact/>
+                  <Footer/>
               </Providers>
               
             )}

@@ -1,8 +1,9 @@
+import Link from "next/link";
 import ThemeButton from "./ThemeButton";
 
 export default function Nav(){
     return (
-        <nav className="h-[60px] w-full px-10 bg-[#7e9fab32] z-30 flex  justify-center gap-10 place-items-center -translate-y-50  transition-all duration-200 fixed  ">
+        <nav className="h-[60px] w-full px-10 bg-[#7e9fabcd] z-30 flex  justify-center gap-10 place-items-center -translate-y-50  transition-all duration-200 fixed  ">
 
             <a href="#">
                 Interior
@@ -10,14 +11,14 @@ export default function Nav(){
             <a href="#">
                 Exterior
             </a>
-            <a href="#"
+            <Link href="/#about"
             className=""
             >
                 About
-            </a>
-            <a href="#">
+            </Link>
+            <Link href="/contact">
                 Contact
-            </a>
+            </Link>
             <ThemeButton />
         </nav>
     )
