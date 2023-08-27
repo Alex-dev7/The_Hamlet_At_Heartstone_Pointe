@@ -10,6 +10,7 @@ import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Loader from './components/Loader'
 import Banner from './components/Banner'
+import About from './components/About'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -36,10 +37,10 @@ export default function RootLayout({
 
 
   return (
-    <html lang="en" suppressHydrationWarning >
+    <html lang="en" suppressHydrationWarning  className='scroll-smooth'>
       
       
- <body className={`${inter.className} bg-[#7e9fab42]  text-black dark:bg-gray-900 dark:text-white  selection:bg-gray-50 h-auto`}>
+ <body className={`${inter.className} bg-[#d8e6ed81]   text-black dark:bg-gray-900 dark:text-white  selection:bg-gray-50 h-auto`}>
         
              <AnimatePresence>  
                
@@ -56,15 +57,17 @@ export default function RootLayout({
                 <Banner/>
                 {!loading && (
                   // translate-y-[25%] w-full
-              <div className=' final block top-[-128px] -z-20 '>
-                <motion.img
+              <div className=' final block -z-20 '>
+                <motion.video
                   transition={{ ease: "anticipate", duration: 1.6}}
-                  src={`/image-2.jpg`}
+                  src={`/HEARTHSTONE.mp4`}
+                  autoPlay loop muted 
                   layoutId='main-image-1'
                   className='w-[85vw] h-[80vh] mx-auto object-cover '
-                />
+                ></motion.video>
               </div>
             )}
+              <About />
                 <main >
                     {children}
                 </main>

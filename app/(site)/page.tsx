@@ -6,9 +6,9 @@ export default function Home() {
   const { scrollYProgress } = useScroll();
   
   return (
-    <section className="grid grid-cols-2 outline min-h-screen pt-[15vh]">
+    <section className="grid grid-cols-2  min-h-screen pt-[15vh]">
           <motion.div
-            className="progress-bar fixed  top-0 left-0 right-0  h-[8px] bg-green-600 origin-left"
+            className="progress-bar fixed  top-0 left-0 right-0  h-[4px] bg-green-600 origin-left"
             style={{ scaleX: scrollYProgress }}
           />
           <div className="flex flex-col ">
