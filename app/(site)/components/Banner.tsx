@@ -29,7 +29,7 @@ const letterAni = {
 const Banner = () => {
 
   return (
-    <motion.div className='banner  flex flex-col z-20 relative h-[40vh] w-[85vw] mx-auto place-content-center' variants={banner}>
+    <motion.div id='banner' className='banner  flex flex-col z-20 relative h-[40vh] w-[85vw] mx-auto place-content-center' variants={banner}>
       <BannerRowTop title={"THE HAMLET"} />
       <div className="flex ">
         <BannerRowAt title={"at"}  />

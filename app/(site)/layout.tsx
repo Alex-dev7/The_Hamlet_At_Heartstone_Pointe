@@ -41,8 +41,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning  className='scroll-smooth'>
       
-      
- <body className={`${inter.className} bg-[#d8e6ed81]   text-black dark:bg-gray-900 dark:text-white  selection:bg-gray-50 h-auto`}>
+      {/* #305043 */}
+ <body className={`${inter.className} bg-[#CCE5D8]   text-black dark:bg-gray-900 dark:text-white  selection:bg-gray-50 h-auto`}>
         
              <AnimatePresence>  
                
@@ -55,19 +55,21 @@ export default function RootLayout({
             ) : (
 
               <Providers>
-                <Nav/>
-                 <Banner/>
-         
+                <Nav/>        
                { !loading && pathname === "/" ? (
-              <div className=' final block -z-20 '>
-                <motion.video
-                  transition={{ ease: "anticipate", duration: 1.6}}
-                  src={`/HEARTHSTONE.mp4`}
-                  autoPlay loop muted 
-                  layoutId='main-image-1'
-                  className='w-[85vw] h-[80vh] mx-auto object-cover '
-                ></motion.video>
-              </div>
+                <>
+                  <Banner/>
+                  <div className=' final block -z-20 '>
+                    <motion.video
+                      transition={{ ease: "anticipate", duration: 1.6}}
+                      src={`/HEARTHSTONE.mp4`}
+                      autoPlay loop muted 
+                      layoutId='main-image-1'
+                      className='w-[85vw] h-[80vh] mx-auto object-cover '
+                    ></motion.video>
+                  </div>                
+                </>
+
              )  : <></> }
         
                 <main >
