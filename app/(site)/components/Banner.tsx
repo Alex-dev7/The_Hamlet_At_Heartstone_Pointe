@@ -30,7 +30,7 @@ const Banner = () => {
 
   return (
     <motion.div id='banner' className='banner  flex flex-col z-20 relative h-[40vh] w-[85vw] mx-auto place-content-center' variants={banner}>
-      <BannerRowTop title={"THE HAMLET"} />
+      <BannerRowTop title={"The HAMLET"} />
       <div className="flex ">
         <BannerRowAt title={"at"}  />
         <BannerRowCenter title={" HEARTHSTONE "}  />
@@ -50,7 +50,7 @@ const AnimatedLetters = ({ title, disabled }) => (
     {[...title].map((letter, i) => (
       <motion.span
       key={i}
-        className='row-letter  whitespace-nowrap font-[400]  -tracking-wide  drop-shadow-xl shadow-blue-900 overflow-hidden'
+        className='row-letter   -tracking-wide  drop-shadow-xl shadow-blue-900 overflow-hidden'
         variants={disabled ? {} : letterAni}>
         {letter}
       </motion.span>
@@ -61,7 +61,7 @@ const AnimatedLetters = ({ title, disabled }) => (
 const BannerRowTop = ({ title }) => {
   return (
     <div className={"banner-row flex"}>
-      <div className='row-col flex content-center justify-center  text-[5rem]   mt-5'>
+      <div className='row-col flex content-center justify-center  text-[8rem] font-normal  mt-5'>
         <AnimatedLetters title={title} disabled={undefined} />
       </div>
       <motion.div
@@ -83,7 +83,7 @@ const BannerRowTop = ({ title }) => {
 
 const BannerRowBottom = ({ title }) => {
   return (
-    <div className={" text-[4rem] ml-[2rem] "}>
+    <div className={" text-[3rem] ml-[2rem] "}>
       <motion.a
         href="#about"
         initial={{ scale: 0, opacity: 0 }}
@@ -123,7 +123,7 @@ const BannerRowAt= ({ title }) => {
         initial={{ y: 310 }}
         animate={{ y: 0 }}
         transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}
-        className='text-[4rem] '
+        className='text-[3rem] '
         >
         <AnimatedLetters title={title} disabled={undefined} />
       </motion.div>
@@ -137,7 +137,7 @@ const BannerRowCenter = ({ title }) => {
           initial={{ y: 310 }}
           animate={{ y: 0 }}
           transition={{ ease: [0.6, 0.01, -0.05, 0.9], duration: 1 }}
-          className=' text-[4rem] '>
+          className=' text-[3rem] '>
           <AnimatedLetters title={title} disabled={undefined} />
         </motion.div>
       </div>
