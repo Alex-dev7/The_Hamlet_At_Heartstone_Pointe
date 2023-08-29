@@ -42,7 +42,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning  className='scroll-smooth'>
       
       {/* #305043 */}
- <body className={`${inter.className} bg-[#CCE5D8]   text-black dark:bg-gray-900 dark:text-white  selection:bg-gray-50 h-auto`}>
+ <body className={`${inter.className} bg-[#CCE5D8]   text-black dark:bg-[#212b39] dark:text-white  selection:bg-gray-50 h-auto`}>
         
              <AnimatePresence>  
                
