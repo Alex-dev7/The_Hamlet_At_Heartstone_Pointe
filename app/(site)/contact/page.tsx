@@ -29,7 +29,7 @@ const handleChange = ({target}: any) => {
 }
 
 
-  const sendEmail = async (e) => {
+  const sendEmail = async (e: any) => {
     e.preventDefault();
 
     const response = await fetch('/api/contact', {
