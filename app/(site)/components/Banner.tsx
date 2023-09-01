@@ -41,7 +41,9 @@ const Banner = () => {
   );
 };
 
-const AnimatedLetters = ({ title, disabled }) => (
+
+
+const AnimatedLetters = ({ title , disabled }: any) => (
   <motion.span
     className='row-title flex   gap-5  opacity-100 overflow-hidden '
     variants={disabled ? {} : banner}
@@ -58,7 +60,7 @@ const AnimatedLetters = ({ title, disabled }) => (
   </motion.span>
 );
 
-const BannerRowTop = ({ title }) => {
+const BannerRowTop = ({ title } : any) => {
   return (
     <div className={"banner-row flex"}>
       <div className='row-col flex content-center justify-center  text-[8rem] font-normal  mt-5'>
@@ -81,7 +83,7 @@ const BannerRowTop = ({ title }) => {
   );
 };
 
-const BannerRowBottom = ({ title }) => {
+const BannerRowBottom = ({ title }: any) => {
   return (
     <div className={" text-[3rem] ml-[2rem] "}>
       <motion.a
@@ -116,7 +118,7 @@ const BannerRowBottom = ({ title }) => {
   );
 };
 
-const BannerRowAt= ({ title }) => {
+const BannerRowAt= ({ title }: any) => {
   return (
     <div className={`banner-row  ml-[20%] `}>
       <motion.div
@@ -130,7 +132,7 @@ const BannerRowAt= ({ title }) => {
     </div>
   );
 };
-const BannerRowCenter = ({ title }) => {
+const BannerRowCenter = ({ title } : any) => {
     return (
       <div className={`banner-row ml-[2rem] `}>
         <motion.div
