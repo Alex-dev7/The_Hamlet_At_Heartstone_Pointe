@@ -1,14 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse, NextRequest } from 'next/server';
+// import nodemailer from 'nodemailer'
 
-// type DataResponse = {
-//     name: string,
-//     email: string,
-//     message: string
-//   }
+export async function POST(NextRequest) {
 
-  export async function POST(NextRequest) {
-    console.log( await NextRequest.json(), "koooooo")
+    console.log(await NextRequest.json())
     return NextResponse.json({ message: "Email Sent Successfully" }, { status: 200 })
     // try {
     //     const { subject, message } = await request.json();
