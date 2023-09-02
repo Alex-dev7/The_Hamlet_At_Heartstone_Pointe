@@ -1,20 +1,21 @@
 "use client"
 import { useState } from "react"
 import Map from "./components/Map"
-// import { sendContactForm } from "@/lib/utils"
+
 
 const initValues = {
   name: "",
   email: "",
   message: "",
 }
-
 const initState = {values: initValues}
+
+
 
 function Contact() {
 
 const [state, setState] = useState(initState)
- 
+const [popup, setPopup] = useState(false)
 const {values} = state
 
 const handleChange = ({target}: any) => {
@@ -29,29 +30,34 @@ const handleChange = ({target}: any) => {
 }
 
 
+
   const sendEmail = async (e: any) => {
     e.preventDefault();
 
     const response = await fetch('/api/contact', {
       method: 'POST',
       headers: {
-        'content-type': 'application/json'
+        'content-type': 'application/json',
+        Accept: "application/json"
       },
       body: JSON.stringify(values)
     })
-      console.log(await response.json())
+    if (!response.ok) {
+      throw new Error('Failed to submit the data. Please try again.')
+    }
+      // console.log(await response.json())
+      setState(() => ({
+        values: {
+          name: "",
+          email: "",
+          message: "",
+        }
+      }))
   }
 
 
 
-// const onSubmit = async (e) => {
-//   e.preventDefault()
-//   console.log(values, "pagesssss")
-//   setState((prev) => ({
-//     ...prev
-//   }))
-//   await sendContactForm(values)
-// }
+
 
   return (
     <div className="min-h-screen w-screen relative flex place-items-center justify-evenly bg-[#314F44] ">

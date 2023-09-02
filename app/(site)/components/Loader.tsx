@@ -78,7 +78,7 @@ const Loader = ({ setLoading}: any) => {
   
   export const ImageBlock = ({ posX, posY, variants, id }: any) => {
 
-    console.log( posX,  posY,  variants,  id)
+    // console.log( posX,  posY,  variants,  id)
     return (
       <motion.div
         variants={variants}
