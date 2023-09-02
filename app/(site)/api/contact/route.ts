@@ -3,8 +3,7 @@ import nodemailer from 'nodemailer'
 
 export async function POST(NextRequest: any) {
 
-    // console.log(await NextRequest.json())
-    // return NextResponse.json({ message: "Email Sent Successfully" }, { status: 200 })
+
     try {
         const { name, email, message } = await NextRequest.json();
         console.log(name, email, message)

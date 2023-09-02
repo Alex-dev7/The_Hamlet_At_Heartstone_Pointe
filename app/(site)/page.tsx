@@ -2,7 +2,6 @@
 import { motion, useScroll } from "framer-motion"
 import Image from 'next/image'
 import About from "./components/About";
-import Banner from "./components/Banner";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();

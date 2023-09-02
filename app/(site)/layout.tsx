@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Nav from './components/Nav'
 import { Providers } from './components/Providers'
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import Loader from './components/Loader'
 import Banner from './components/Banner'
@@ -42,7 +42,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning  className='scroll-smooth'>
       
       {/* #305043 */}
- <body className={`${inter.className} bg-[#CCE5D8]   text-black dark:bg-[#212b39] dark:text-white  selection:bg-gray-50 h-auto`}>
+ <body className={`${inter.className} bg-[#8fad9a]   text-black dark:bg-[#212b39] dark:text-white  selection:bg-gray-50 h-auto`}>
         
              <AnimatePresence>  
                

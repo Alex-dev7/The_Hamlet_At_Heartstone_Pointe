@@ -3,7 +3,7 @@
 function Footer() {
   return (
     <div
-    className="w-full h-[15vh] bg-emerald-700"
+    className="w-full h-[15vh] bg-[#314F44]"
     >Footer</div>
   )
 }

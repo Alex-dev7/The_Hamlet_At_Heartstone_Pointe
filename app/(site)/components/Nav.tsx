@@ -3,8 +3,10 @@ import ThemeButton from "./ThemeButton";
 
 export default function Nav(){
     return (
-        <nav className="h-[60px] w-full px-10 bg-[#cce5d830] z-30 flex  justify-center gap-10 place-items-center -translate-y-50  transition-all duration-200 fixed  ">
-
+        <nav className="h-[60px] w-full px-10 bg-[#cce5d830] z-30 flex  justify-center gap-10 place-items-center -translate-y-50  transition-all duration-200 fixed text-[#dee5e8]">
+            <a href="/" className="absolute left-8 font-semibold text-lg">
+                LOGO
+            </a>
             {/* <a href="#">
                 Interior
             </a>
