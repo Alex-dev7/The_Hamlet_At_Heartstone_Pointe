@@ -14,7 +14,7 @@ const banner = {
 
 const letterAni = {
 
-  initial: { y: 300,  opacity: 0 },
+  initial: { y: 50,  opacity: 0 },
   animate: {
     y: 0,
    opacity: 1,
@@ -29,15 +29,22 @@ const letterAni = {
 const Banner = () => {
 
   return (
+    <>
     <motion.div id='banner' className='banner  flex flex-col z-20 relative h-[40vh] w-[85vw] mx-auto place-content-center' variants={banner}>
       <BannerRowTop title={"The HAMLET"} />
+      <motion.div 
+          className="w-full border-[1px] border-bottom z-50"
+      ></motion.div>
       <div className="flex ">
         <BannerRowAt title={"at"}  />
         <BannerRowCenter title={" HEARTHSTONE "}  />
          <BannerRowBottom title={"pointe"} />      
       </div>
          
-    </motion.div>
+    </motion.div>    
+    
+    </>
+
   );
 };
 
@@ -52,7 +59,7 @@ const AnimatedLetters = ({ title , disabled }: any) => (
     {[...title].map((letter, i) => (
       <motion.span
       key={i}
-        className='row-letter   -tracking-wide  drop-shadow-xl shadow-blue-900 overflow-hidden'
+        className='row-letter   mx-[-2px]  drop-shadow-xl shadow-blue-900 overflow-hidden'
         variants={disabled ? {} : letterAni}>
         {letter}
       </motion.span>

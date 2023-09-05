@@ -29,6 +29,7 @@ function Contact() {
         className="text-[20px] font-medium  text-white"
         >Contact Info</h3>
           <a href="mailto:test@test.com">test@test.com</a>
+          <br/>
           <a href="tel:+15189155569">(123) 4567-891</a>
           <p>
             Adress: <br/>
