@@ -7,12 +7,19 @@ export default function Nav(){
             <a href="/" className="absolute left-8 font-semibold text-lg">
                 LOGO
             </a>
-            {/* <a href="#">
-                Interior
+            <a href="#layout" className="">
+                layout
+                <div className=" flex flex-col gap-2 ">
+                    <Link href="#">
+                        Interior
+                    </Link>
+                    <Link href="#">
+                        Exterior
+                    </Link>                
+                </div>
             </a>
-            <a href="#">
-                Exterior
-            </a> */}
+
+
             <Link href="/#about"
             className=""
             >
