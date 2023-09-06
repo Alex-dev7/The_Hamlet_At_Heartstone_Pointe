@@ -19,7 +19,7 @@ const item = {
     opacity: 0.8,
     y: 0,
     transition: {
-      ease: 'anticipate',
+      ease: 'easeInOut',
       duration: 1.6,
     },
   },
@@ -28,7 +28,6 @@ const item = {
     y: -200,
     transition: {
       ease: 'easeOut',
-      
       duration: 1,
     },
   },
@@ -49,19 +48,19 @@ const itemMain = {
 
 const Loader = ({ setLoading}: any) => {
     return (
-      <motion.div className="loader">
+      <motion.div className="loader ">
         <motion.div
           variants={container}
           onAnimationComplete={() => setLoading(false)}
           initial="hidden"
           animate="show"
           exit="exit"
-          className="loader-inner  "
+          className="loader-inner"
         >
           <ImageBlock variants={item} id="image-1" />
-          <motion.div variants={itemMain} className="transition-image w-fit  flex mx-auto mt-[30vh] object-cover ">
+          <motion.div variants={itemMain} className="transition-image w-fit  flex mx-auto mt-[27vh]   object-cover ">
             <motion.img
-              className="align-middle w-auto h-[300px] object-cover z-50"
+              className="align-middle w-auto h-[300px] object-cover z-50 "
               layoutId="main-image-1"
               src={`/image-2.jpg`}
               alt="random alt"

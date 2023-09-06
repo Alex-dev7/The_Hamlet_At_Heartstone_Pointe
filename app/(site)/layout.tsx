@@ -39,53 +39,48 @@ export default function RootLayout({
 
 
   return (
-    <html lang="en" suppressHydrationWarning  className='scroll-smooth'>
-      
+    <html lang="en" suppressHydrationWarning className="scroll-smooth" >
       {/* #305043 */}
- <body className={`${inter.className} bg-[#8fad9a]   text-black dark:bg-[#212b39] dark:text-white  selection:bg-gray-50 h-auto`}>
+      <body
+        className={`${inter.className} bg-[#ffffff]   text-black dark:bg-[#212b39] dark:text-white  selection:bg-gray-50 h-auto`}
+      >
         
-             <AnimatePresence>  
-               
-                 
-              {loading ? (
-                
-              <motion.div key='loader' className='h-full w-full absolute  dark:bg-gray-900  '>
-                <Loader setLoading={setLoading} />
-              </motion.div>
-            ) : (
-
-              <Providers>
-                <Nav/>        
-               { !loading && pathname === "/" ? (
+        <AnimatePresence>
+          {loading ? (
+            <motion.div
+              key="loader"
+              className="h-full w-full absolute  dark:bg-gray-900  "
+            >
+              <Loader setLoading={setLoading} />
+            </motion.div>
+          ) : (
+            <Providers>
+              <Nav />
+              {!loading && pathname === "/" ? (
                 <>
-                  <Banner/>
-                  <div className=' final block -z-20 '>
+                  <Banner />
+                  <div className=" final block -z-20 ">
                     <motion.video
-                      transition={{ ease: "anticipate", duration: 1.6}}
+                      transition={{ ease: "anticipate", duration: 1.6 }}
                       src={`/HEARTHSTONE.mp4`}
-                      autoPlay loop muted 
-                      layoutId='main-image-1'
-                      className='w-[85vw] h-[80vh] mx-auto object-cover '
+                      autoPlay
+                      loop
+                      muted
+                      layoutId="main-image-1"
+                      className="w-[85vw] h-[80vh] mx-auto object-cover "
                     ></motion.video>
-                  </div>                
+                  </div>
                 </>
+              ) : (
+                <></>
+              )}
 
-             )  : <></> }
-        
-                <main >
-                    {children}
-                </main>
-                  <Footer/>
-              </Providers>
-              
-            )}
-           
-          
-             </AnimatePresence>              
-           </body>
-
-        
-      
+              <main>{children}</main>
+              <Footer />
+            </Providers>
+          )}
+        </AnimatePresence>
+      </body>
     </html>
-  )
+  );
 }
