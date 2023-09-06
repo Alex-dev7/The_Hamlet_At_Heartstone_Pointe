@@ -94,7 +94,7 @@ function Form() {
       disabled={!values.name || !values.email || !values.message}
     
      
-      className="bg-neutral-200 sm:w-full lg:w-fit px-12 py-3 font-extralight text-sm place-self-end hover:bg-white"
+      className="bg-neutral-200 dark:text-black sm:w-full lg:w-fit px-12 py-3 font-extralight text-sm place-self-end hover:bg-white"
     >
       SUBMIT
     </button>
