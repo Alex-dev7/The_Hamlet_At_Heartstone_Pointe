@@ -30,7 +30,7 @@ const Banner = () => {
 
   return (
     <>
-    <motion.div id='banner' className='banner  flex flex-col z-20 relative h-[40vh] w-[85vw] mx-auto place-content-center' variants={banner}>
+    <motion.div id='banner' className='banner  flex flex-col z-20 relative h-[50vh] w-[85vw] mx-auto pt-[300px]  place-content-center' variants={banner}>
       <BannerRowTop title={"The HAMLET"} />
       <motion.div 
           className="w-full border-[1px] border-bottom z-50"
@@ -59,7 +59,7 @@ const AnimatedLetters = ({ title , disabled }: any) => (
     {[...title].map((letter, i) => (
       <motion.span
       key={i}
-        className='row-letter   mx-[-2px]  drop-shadow-xl shadow-blue-900 overflow-hidden'
+        className='row-letter   mx-[-2px]  drop-shadow-xl shadow-blue-900 overflow-hidden dark:text-slate-200 '
         variants={disabled ? {} : letterAni}>
         {letter}
       </motion.span>
