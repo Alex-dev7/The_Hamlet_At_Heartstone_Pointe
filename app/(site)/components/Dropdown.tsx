@@ -20,9 +20,9 @@ function Dropdown() {
                 <Link href="/exterior" className="hover:text-white hover:font-normal hover:underline ">
                     exterior
                 </Link>
-                <a href="#" className="hover:text-white hover:font-normal hover:underline">
-                    layout
-                </a>                
+                {/* <a href="#" className="hover:text-white hover:font-normal hover:underline">
+                    map
+                </a>                 */}
             </div>
         }
                 

@@ -1,9 +1,11 @@
-
+import { usePathname } from "next/navigation"
 
 function Footer() {
+  const pathname = usePathname()
+
   return (
     <footer
-    className="w-full h-[15vh] bg-[#314f4423] flex justify-between px-[3rem] py-2 "
+    className={`w-full h-[15vh] ${pathname === "/contact" ? "bg-[#314F44] " : "bg-[#314f4400]"}  flex justify-between px-[3rem] py-2 `}
     >
       <div>
         <h3>LOGO</h3>

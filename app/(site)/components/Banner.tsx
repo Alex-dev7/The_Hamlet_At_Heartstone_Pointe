@@ -6,7 +6,7 @@ const banner = {
   animate: {
     y: 0,
     transition: {
-      delayChildren: 0.2,
+      delayChildren: 0.1,
       staggerChildren: 0.1,
     },
   },
@@ -14,7 +14,7 @@ const banner = {
 
 const letterAni = {
 
-  initial: { y: 50,  opacity: 0 },
+  initial: { y: 10,  opacity: 0 },
   animate: {
     y: 0,
    opacity: 1,
@@ -30,9 +30,9 @@ const Banner = () => {
 
   return (
     <>
-    <motion.div id='banner' className='banner  flex flex-col z-20 relative h-[50vh] w-[85vw] mx-auto pt-[100px]  place-content-center' variants={banner}>
+    <motion.div id='banner' className='banner  flex flex-col z-20 relative h-[50vh] w-[85vw] mx-auto  place-content-center' variants={banner}>
       <BannerRowTop title={"The HAMLET"} />
-      <div className="flex ">
+      <div className="flex w-fit mx-auto -mt-[50px]">
         <BannerRowAt title={"at"}  />
         <BannerRowCenter title={" HEARTHSTONE "}  />
          <BannerRowBottom title={"pointe"} />      
@@ -67,10 +67,10 @@ const AnimatedLetters = ({ title , disabled }: any) => (
 const BannerRowTop = ({ title } : any) => {
   return (
     <div className={"banner-row flex"}>
-      <div className='row-col flex content-center justify-center  text-[8rem] font-normal  mt-5'>
+      <div className='row-col flex content-center  justify-center  text-[8rem] font-normal mx-auto mt-5'>
         <AnimatedLetters title={title} disabled={undefined} />
       </div>
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -82,7 +82,7 @@ const BannerRowTop = ({ title } : any) => {
             <span>
             
             </span>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };
@@ -95,7 +95,7 @@ const BannerRowBottom = ({ title }: any) => {
         initial={{ scale: 0, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ ease: "circInOut", duration: 1, delay: 1 }}
-        className='text-[1rem]  w-[100px] h-[100px] flex flex-col place-items-center font-medium justify-center   rounded-full absolute -left-12 top-[70vh] bg-white cursor-pointer hover:border-2 hover:bg-[#869AA1] hover:text-white transition-color duration-200  dark:text-black dark:hover:text-white'>
+        className='text-[1rem]  w-[100px] h-[100px] flex flex-col place-items-center font-medium justify-center   rounded-full absolute -left-12 top-[70vh] bg-white cursor-pointer hover:border-2 hover:bg-[#869AA1] hover:text-white transition-color duration-200  dark:text-black dark:hover:text-white '>
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -124,7 +124,7 @@ const BannerRowBottom = ({ title }: any) => {
 
 const BannerRowAt= ({ title }: any) => {
   return (
-    <div className={`banner-row  ml-[20%] `}>
+    <div className={`banner-row  `}>
       <motion.div
         initial={{ y: 310 }}
         animate={{ y: 0 }}
