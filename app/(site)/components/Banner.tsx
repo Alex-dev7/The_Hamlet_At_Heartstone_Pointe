@@ -32,9 +32,6 @@ const Banner = () => {
     <>
     <motion.div id='banner' className='banner  flex flex-col z-20 relative h-[50vh] w-[85vw] mx-auto pt-[100px]  place-content-center' variants={banner}>
       <BannerRowTop title={"The HAMLET"} />
-      <motion.div 
-          className="w-full border-[1px] border-bottom z-50"
-      ></motion.div>
       <div className="flex ">
         <BannerRowAt title={"at"}  />
         <BannerRowCenter title={" HEARTHSTONE "}  />

@@ -3,7 +3,7 @@
 function Footer() {
   return (
     <footer
-    className="w-full h-[15vh] bg-[#314F44] flex justify-between px-[3rem] py-2 "
+    className="w-full h-[15vh] bg-[#314f4423] flex justify-between px-[3rem] py-2 "
     >
       <div>
         <h3>LOGO</h3>
