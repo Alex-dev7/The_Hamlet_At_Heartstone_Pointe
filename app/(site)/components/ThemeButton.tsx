@@ -19,7 +19,7 @@ function ThemeButton() {
   return (
     <button
     onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-    className="absolute flex gap-1 text-sm place-items-center right-5 z-50 transition-all  bg-[#b1d2e3c2] dark:bg-[#4d5c65] rounded-2xl px-3 " 
+    className="absolute flex gap-1 text-sm place-items-center right-5 z-50 transition-all  bg-[#b1d2e394] dark:bg-[#4d5c655c] rounded-2xl px-3 " 
     >{resolvedTheme === 'dark' ? (
         <>
         <span>light</span>

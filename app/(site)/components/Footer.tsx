@@ -1,4 +1,6 @@
 import { usePathname } from "next/navigation"
+import SvgLogo from "./SVG"
+
 
 function Footer() {
   const pathname = usePathname()
@@ -7,8 +9,10 @@ function Footer() {
     <footer
     className={`w-full h-[15vh] ${pathname === "/contact" ? "bg-[#314F44] " : "bg-[#314f4400]"}  flex justify-between px-[3rem] py-2 `}
     >
-      <div>
-        <h3>LOGO</h3>
+      <div className="flex place-items-center">
+       
+          <SvgLogo />
+        
       </div>
       <div>
 

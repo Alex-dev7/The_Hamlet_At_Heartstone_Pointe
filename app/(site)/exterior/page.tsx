@@ -1,9 +1,16 @@
+"use client"
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 function Exterior() {
     const images = [1, 2, 3, 4, 5, 6]
   return (
-    <section className="min-h-screen py-[10%] px-[2%] grid grid-cols-2 ">
+    <motion.section className="min-h-screen py-[10%] px-[2%] grid grid-cols-2 "
+    initial={{opacity: 0}}
+    animate={{ opacity: 1}}
+    exit={{opacity: 0}}
+    transition={{duration: 0.3, ease: "easeOut"}}
+    >
         <div className="grid grid-cols-2 gap-5 grid-flow-row ">
            
            {images.map((i) => i % 3 === 0 ?   <Image key={i} className="col-span-2 w-full  object-cover outline p-2 border-4 border-white"  src="https://picsum.photos/800/400" width={800} height={400} alt="#" /> : <Image key={i} src="https://picsum.photos/600/400" alt="#" width={500} height={400} className="border-4 border-white p-2"/>
@@ -22,7 +29,7 @@ function Exterior() {
         </div>
 
 
-    </section>
+    </motion.section>
   )
 }
 

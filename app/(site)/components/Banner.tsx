@@ -35,7 +35,7 @@ const Banner = () => {
       <div className="flex w-fit mx-auto -mt-[50px]">
         <BannerRowAt title={"at"}  />
         <BannerRowCenter title={" HEARTHSTONE "}  />
-         <BannerRowBottom title={"pointe"} />      
+         <BannerRowBottom title={"Pointe"} />      
       </div>
          
     </motion.div>    

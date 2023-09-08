@@ -13,11 +13,11 @@ function Dropdown() {
         </button>
         {
             isOpen && 
-            <div onMouseLeave={() => setIsOpen(false)} className="absolute flex flex-col gap-3 px-3 py-3  text-base tracking-widest">
-                <Link href="/interior" className="hover:text-white hover:font-normal hover:underline">
+            <div onMouseLeave={() => setIsOpen(false)} className="absolute flex flex-col gap-3 px-3 py-3  text-base font-medium tracking-widest">
+                <Link href="/interior" className="hover:text-white hover:font-extrabold hover:underline">
                     interior
                 </Link>
-                <Link href="/exterior" className="hover:text-white hover:font-normal hover:underline ">
+                <Link href="/exterior" className="hover:text-white hover:font-extrabold hover:underline ">
                     exterior
                 </Link>
                 {/* <a href="#" className="hover:text-white hover:font-normal hover:underline">

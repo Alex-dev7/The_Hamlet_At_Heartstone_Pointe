@@ -1,10 +1,16 @@
+"use client"
 import Image from "next/image"
-
+import { motion } from "framer-motion"
 
 function Interior() {
     const images = [1, 2, 3, 4, 5, 6]
   return (
-    <section className="min-h-screen py-[10%] px-[2%] grid grid-cols-2 ">
+    <motion.section className="min-h-screen py-[10%] px-[2%] grid grid-cols-2 "
+    initial={{ opacity: 0}}
+    animate={{opacity: 1}}
+    exit={{opacity: 0}}
+    transition={{ duration: 0.5, ease: "easeOut"}}
+    >
         <div className="flex flex-col place-content-center relative">
             <div className="fixed w-[45%] top-[20%] flex flex-col gap-10">
                 <h3>our interior.</h3>
@@ -21,7 +27,7 @@ function Interior() {
                )}
         </div>
 
-    </section>
+    </motion.section>
   )
 }
 
