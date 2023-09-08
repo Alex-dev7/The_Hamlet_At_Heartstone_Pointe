@@ -8,12 +8,12 @@ function Dropdown() {
   return (
 
     <div className=" relative "  onMouseLeave={() => setIsOpen(false)}>
-        <button onClick={() => setIsOpen(!isOpen)} onMouseOver={() => setIsOpen(true)}    className="block  p-3 hover:text-white ">
+        <button onClick={() => setIsOpen(!isOpen)} onMouseOver={() => setIsOpen(true)}    className="block  p-3 hover:text-white hover:translate-y-1 transition-all">
             layout
         </button>
         {
             isOpen && 
-            <div onMouseLeave={() => setIsOpen(false)} className="absolute flex flex-col gap-3 px-3 py-3  text-base font-medium tracking-widest">
+            <div onMouseLeave={() => setIsOpen(false)} className="absolute flex flex-col gap-3 px-3 py-3  text-base font-medium tracking-widest ">
                 <Link href="/interior" className="hover:text-white hover:font-extrabold hover:underline">
                     interior
                 </Link>

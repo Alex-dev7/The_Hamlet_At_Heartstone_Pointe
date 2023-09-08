@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+
 import { motion } from "framer-motion";
 
 const banner = {
@@ -37,7 +37,7 @@ const Banner = () => {
         <BannerRowCenter title={" HEARTHSTONE "}  />
          <BannerRowBottom title={"Pointe"} />      
       </div>
-         
+         <hr/>
     </motion.div>    
     
     </>

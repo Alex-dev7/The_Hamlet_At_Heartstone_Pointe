@@ -23,11 +23,13 @@
 
 body {
   font-family: 'Expletus Sans', cursive;
+
 }
 
 body.loading {
   overflow: hidden;
   height: 100vh;
+  background-color: #314F44;
 }
 
 .loader .loader-inner .image-block {

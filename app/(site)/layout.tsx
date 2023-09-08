@@ -42,14 +42,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className="scroll-smooth" >
       {/* #305043 */}
       <body
-        className={`${inter.className} bg-[#ffffff]   text-black dark:bg-[#212b39] dark:text-white  selection:bg-gray-50 h-auto`}
+        className={`${inter.className} bg-[#314F44]   text-black dark:bg-[#314F44] dark:text-white  selection:bg-gray-50 h-auto`}
       >
         
         <AnimatePresence>
           {loading ? (
             <motion.div
               key="loader"
-              className="h-full w-full absolute  dark:bg-gray-900  "
+              className="h-full w-full absolute    "
             >
               <Loader setLoading={setLoading} />
             </motion.div>
@@ -61,13 +61,14 @@ export default function RootLayout({
                   <Banner />
                   <div className=" final block -z-20 ">
                     <motion.video
+                    
                       transition={{ ease: "anticipate", duration: 1.6 }}
                       src={`/HEARTHSTONE.mp4`}
                       autoPlay
                       loop
                       muted
                       layoutId="main-image-1"
-                      className="w-[85vw] h-[80vh] mx-auto object-cover "
+                      className="w-[85vw] h-[85vh] mx-auto object-cover "
                     ></motion.video>
                   </div>
                 </>
