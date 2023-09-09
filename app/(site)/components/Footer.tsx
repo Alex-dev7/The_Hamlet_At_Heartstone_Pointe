@@ -7,7 +7,7 @@ function Footer() {
 
   return (
     <footer
-    className={`w-full h-[15vh] ${pathname === "/contact" ? "bg-[#314F44] " : "bg-[#314f4400]"}  flex justify-between px-[3rem] py-2 `}
+    className={`w-full h-[15vh] ${pathname === "/contact" ? "bg-[#314F44] " : "bg-[#314f4400]"}  flex justify-between px-[3rem] py-2 font-thin`}
     >
       <div className="flex place-items-center">
        

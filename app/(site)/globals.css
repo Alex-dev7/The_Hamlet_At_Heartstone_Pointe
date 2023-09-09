@@ -61,7 +61,7 @@ body.loading {
 }
 
 .loader .loader-inner .image-block.image-3 {
-  width: 300px;
+  width: 420px;
   right: 12%;
   top: 8%;
 }
@@ -74,10 +74,11 @@ body.loading {
 }
 
 .loader .loader-inner .image-block.image-4 {
-  max-width: 400px;
+  max-width: 440px;
   width: 40%;
   right: 20%;
   bottom: 10%;
+ 
 }
 
 @media (max-width: 400px) {
@@ -88,7 +89,7 @@ body.loading {
 }
 
 .loader .loader-inner .image-block.image-5 {
-  width: 280px;
+  width: 380px;
   left: 14%;
   top: 12%;
 }

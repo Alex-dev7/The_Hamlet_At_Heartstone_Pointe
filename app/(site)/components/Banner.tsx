@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 
 const banner = {
-    initial: { y: 200 },
+  initial: { y: 200 },
   animate: {
     y: 0,
     transition: {

@@ -58,11 +58,11 @@ const Loader = ({ setLoading}: any) => {
           className="loader-inner"
         >
           <ImageBlock variants={item} id="image-1" />
-          <motion.div variants={itemMain} className="transition-image w-fit  flex mx-auto mt-[27vh]   object-cover ">
+          <motion.div variants={itemMain} className="transition-image w-fit  flex mx-auto mt-[30vh]   object-cover ">
             <motion.img
-              className="align-middle w-auto h-[300px] object-cover z-50 "
+              className="align-middle w-auto h-[200px] object-cover z-50 mx-5  shadow-[0_20px_50px_rgba(0,0,0)]"
               layoutId="main-image-1"
-              src={`/image-2.jpg`}
+              src={`/LOGO.svg`}
               alt="random alt"
               
             />
@@ -89,9 +89,10 @@ const Loader = ({ setLoading}: any) => {
       >
         <Image
           src={`/${id}.jpg`}
-          width={400}
-          height={300}
+          width={500}
+          height={400}
           alt={id}
+          className=" shadow-[0_20px_50px_rgba(0,0,0)]"
         />
       </motion.div>
     );

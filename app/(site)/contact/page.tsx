@@ -17,13 +17,16 @@ function Contact() {
     transition={{duration: 0.3, ease: "easeOut"}}
     className="h-screen w-screen relative flex place-items-center justify-evenly bg-[#314F44] ">
       <div className="w-[50%] h-[90%] flex flex-col justify-around pl-8">
-        <p className="text-[15px]  text-white font-thin"
-        >
-        <h2
-        className="text-[40px] font-medium  text-white"
-        >Let&apos;s Talk</h2>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-        </p>
+        <div>
+          <h2
+          className="text-[40px] font-medium  text-white "
+          >Let&apos;s Talk</h2>
+          <p className="text-[15px]  text-white font-thin w-[90%]"
+          >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          </p>         
+        </div>
+
         <address className="not-italic text-white font-thin">
         <h3
         className="text-[20px] font-medium  text-white"
