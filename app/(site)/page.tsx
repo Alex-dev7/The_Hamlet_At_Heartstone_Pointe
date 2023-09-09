@@ -21,7 +21,7 @@ export default function Home() {
                         INTERIOR
                       </h2>
                       <Image src='/image-5.jpg' alt='interior' width={400} height={200}
-                      className="w-[80%] h-[30%] mx-auto object-cover hover:scale-105 cursor-pointer transition-all duration-300 shadow-[0_20px_50px_rgba(0,0,0)]"
+                      className="w-[80%] h-[30%] mx-auto object-cover hover:scale-105 cursor-pointer transition-all duration-300 shadow-[0_20px_50px_rgba(0,0,0)]  brightness-75 hover:brightness-100"
                       />   
               </Link>
               <Link href="/exterior">
@@ -30,7 +30,7 @@ export default function Home() {
                   </h2>
                   
                   <Image src='/image-4.jpg' alt='interior' width={400} height={200}
-                  className="w-[80%] h-[30%] mx-auto object-cover hover:scale-105   cursor-pointer transition-all duration-300 ease-in-out  shadow-[0_20px_50px_rgba(0,0,0)]"  />                                  
+                  className="w-[80%] h-[30%] mx-auto object-cover hover:scale-105   cursor-pointer transition-all duration-300 ease-in-out  shadow-[0_20px_50px_rgba(0,0,0)]  brightness-75 hover:brightness-100"  />                                  
               </Link>
 
       </section>    

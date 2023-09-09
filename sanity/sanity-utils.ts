@@ -1,18 +1,15 @@
 import { groq } from "next-sanity";
 import { createClient } from "next-sanity";
 import clientConfig  from "./config/client-config"
+import { Interior } from "@/types/Interior";
 
-// export async function getRestaurantInfo(): Promise<Restaurant[]> {
+export async function getInteriorInfo(): Promise<Interior[]> {
 
-//     return createClient(clientConfig).fetch(
-//         groq`*[_type == "restaurant"]{
-//             _id,
-//             address,
-//             phone,
-//             email,
-//             reserve,
-//             facebook,
-//             instagram
-//         }`
-//     )
-// }
+    return await createClient(clientConfig).fetch(
+        groq`*[_type == "interior"]{
+           
+            content,
+            "images":   images[].asset->url ,
+        }`
+    )
+}

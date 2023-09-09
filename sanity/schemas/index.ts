@@ -1,5 +1,6 @@
-import project from "./project-schema"
+import interior from "./interior-schema"
+// import gallery from "./interior-gallery-schema"
 
-const schemas = [project]
+const schemas = [interior]
 
 export default schemas

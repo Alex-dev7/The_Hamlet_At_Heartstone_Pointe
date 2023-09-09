@@ -1,8 +1,19 @@
 "use client"
 import Image from "next/image"
 import { motion } from "framer-motion"
+import { useEffect, useState } from "react"
+
+import { getInteriorInfo } from "@/sanity/sanity-utils"
+import { PortableText } from "@portabletext/react"
 
 function Interior() {
+  const [data, setData] = useState(null)
+  useEffect(() => {
+      const response = getInteriorInfo()
+      response.then((interior) => console.log(interior[0].images))
+      
+    
+  }, [])
     const images = [1, 2, 3, 4, 5, 6]
   return (
     <motion.section className="min-h-screen py-[10%] px-[2%] grid grid-cols-2 "
@@ -28,6 +39,7 @@ function Interior() {
         </div>
 
     </motion.section>
+
   )
 }
 
