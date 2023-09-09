@@ -8,13 +8,27 @@ import { PortableText } from "@portabletext/react"
 
 function Interior() {
   const [data, setData] = useState(null)
+  const [openModal, setOpenModal] = useState(false)
+  const [img, setImg] = useState(true)
   useEffect(() => {
       const response = getInteriorInfo()
       response.then((interior) => console.log(interior[0].images))
       
     
   }, [])
-    const images = [1, 2, 3, 4, 5, 6]
+
+  const images = [1, 2, 3, 4, 5, 6]
+
+  function handleClick(e: any) {
+    // console.log(e.target.src)
+    setOpenModal(!openModal)
+    setImg(e.target.src)
+    return 0
+  }
+  function closeModal(){
+    setOpenModal(false)
+    return 0
+  }
   return (
     <motion.section className="min-h-screen py-[10%] px-[2%] grid grid-cols-2 "
     initial={{ opacity: 0}}
@@ -22,6 +36,12 @@ function Interior() {
     exit={{opacity: 0}}
     transition={{ duration: 0.5, ease: "easeOut"}}
     >
+          { openModal &&
+      <div onClick={closeModal} className="fixed flex justify-center place-items-center z-50 bg-black bg-opacity-75 top-0 right-0 w-screen h-full">
+        { img && <Image src={`https://picsum.photos/800/400`} alt="" width={800} height={400} className=""/>}
+
+      </div>
+    }
         <div className="flex flex-col place-content-center relative">
             <div className="fixed w-[45%] top-[20%] flex flex-col gap-10">
                 <h3 className="text-[2.8rem]">interior.</h3>
@@ -34,7 +54,10 @@ function Interior() {
         </div>
         <div className="grid grid-cols-2 gap-2 grid-flow-row ">
            
-            {images.map((i) => i % 3 === 0 ?   <Image key={i} className="col-span-2 w-full  object-cover outline  border-4 border-white hover:scale-[102%] transition-all brightness-75 hover:brightness-100"  src="https://picsum.photos/800/400" width={800} height={400} alt="#" /> : <Image key={i} src="https://picsum.photos/600/800" alt="#" width={600} height={800} className="border-4 border-white hover:scale-[102%] transition-all brightness-75 hover:brightness-100"/>
+        {images.map((i) => i % 3 === 0 ?  
+         <Image key={i} onClick={handleClick} className="col-span-2 w-full  object-cover outline  border-4 border-white hover:scale-[102%] transition-all brightness-75 hover:brightness-100"  src="https://picsum.photos/800/400" width={800} height={400} alt="#" /> 
+         : 
+         <Image key={i} onClick={handleClick} src="https://picsum.photos/600/800" alt="#" width={600} height={800} className="border-4 border-white hover:scale-[102%] transition-all brightness-75 hover:brightness-100"/>
                )}
         </div>
 
