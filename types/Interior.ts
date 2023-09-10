@@ -2,9 +2,7 @@ import { PortableTextBlock } from "sanity";
 
 export type Interior  = {
     content: PortableTextBlock[];
-    images: [
-        {image: string;}
-    ];
+    images: string[];
     
 }
 
