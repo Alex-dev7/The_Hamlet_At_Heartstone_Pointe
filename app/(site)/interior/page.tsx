@@ -53,6 +53,7 @@ function Interior() {
             <div className="fixed w-[45%] top-[20%] flex flex-col gap-10">
                 <h3 className="text-[2.8rem]">interior.</h3>
                 <hr/>
+                {/* @ts-ignore: Unreachable code error */}  
                 <PortableText value={data && data?.content} /> 
                 <Image src={"https://i.imgur.com/RQgw2hA.jpeg"} alt=""  width={600} height={800} className="w-[900px]"/>                   
             </div>

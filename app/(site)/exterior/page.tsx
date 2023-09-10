@@ -1,12 +1,22 @@
 "use client"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { getInteriorInfo } from "@/sanity/sanity-utils"
+import { Interior } from "@/types/Interior"
 
 function Exterior() {
-    const [openModal, setOpenModal] = useState(false)
-    const [img, setImg] = useState(true)
-    const images = [1, 2, 3, 4, 5, 6]
+  const [data, setData] = useState<Interior[] | {}>()
+  const [openModal, setOpenModal] = useState(false)
+  const [img, setImg] = useState(0)
+
+  useEffect(() => {
+      const response = getInteriorInfo()
+      response.then((d) => {
+        const [interior] = d
+        setData(interior)
+       })
+  }, [])
 
     function handleClick(e: any) {
       // console.log(e.target.src)
