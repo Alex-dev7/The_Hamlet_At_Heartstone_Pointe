@@ -23,11 +23,11 @@ function ThemeButton() {
     >{resolvedTheme === 'dark' ? (
         <>
         <span>light</span>
-        <Image src='/dark.png' alt='dark button' width={30} height={30} />
+        <Image src='/dark.png' alt='dark button' width={25} height={25} />
         </>
     ) : (
         <>
-        <Image src='/light.png' alt='light button' width={30} height={30} />
+        <Image src='/light.png' alt='light button' width={25} height={25} />
         <span>dark</span>
         
         </>
