@@ -29,7 +29,10 @@ export default function Nav(){
             </Link>                
             }
 
-            <Dropdown  />           
+            <Dropdown  />  
+            <Link href="/explore" className="hover:text-white hover:translate-y-1 transition-all">
+                explore
+            </Link>         
             <Link href="/contact" className="hover:text-white hover:translate-y-1 transition-all">
                 contact
             </Link>
