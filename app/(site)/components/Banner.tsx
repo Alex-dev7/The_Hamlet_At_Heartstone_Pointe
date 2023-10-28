@@ -31,13 +31,14 @@ const Banner = () => {
   return (
     <>
     <motion.div id='banner' className='banner  flex flex-col z-20 relative h-[50vh] w-[85vw] mx-auto  place-content-center' variants={banner}>
-      <BannerRowTop title={"The HAMLET"} />
+      {/* <BannerRowTop title={"The HAMLET"} /> */}
+      <Square />
       <div className="flex w-fit mx-auto -mt-[50px]">
-        <BannerRowAt title={"at"}  />
-        <BannerRowCenter title={" HEARTHSTONE "}  />
+        {/* <BannerRowAt title={"at"}  /> */}
+        {/* <BannerRowCenter title={" HEARTHSTONE "}  /> */}
          <BannerRowBottom title={"Pointe"} />      
       </div>
-         <hr/>
+         {/* <hr/> */}
     </motion.div>    
     
     </>
@@ -117,7 +118,7 @@ const BannerRowBottom = ({ title }: any) => {
           down
         </motion.span>
       </motion.a>
-      <AnimatedLetters title={title} disabled={undefined} />
+      {/* <AnimatedLetters title={title} disabled={undefined} /> */}
     </div>
   );
 };
@@ -146,6 +147,49 @@ const BannerRowCenter = ({ title } : any) => {
           className=' text-[3rem] '>
           <AnimatedLetters title={title} disabled={undefined} />
         </motion.div>
+      </div>
+    );
+  };
+
+
+  // square
+  const Square = () => {
+    return (
+      <div className={" text-[3rem] ml-[2rem] "}>
+        <motion.a
+          href="#about"
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ ease: "circInOut", duration: 1, delay: 1 }}
+          className='text-[1rem]  w-[200px] h-[200px] flex flex-col place-items-center font-medium justify-center    bg-green-600 cursor-pointer hover:bg-[#869AA1] hover:text-white transition-color duration-200  dark:text-black dark:hover:text-white relative'>
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              delay: 1.8,
+            }}
+            className=""
+            >
+            <p
+            className="absolute text-[4rem] w-[80vw] flex text-white"
+            >
+              The Hamlet at Hearthstone Pointe
+            </p>
+          </motion.span>
+          {/* <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{
+              ease: "easeInOut",
+              duration: 1,
+              delay: 1.8,
+            }}>
+            down
+          </motion.span> */}
+        </motion.a>
+
       </div>
     );
   };
