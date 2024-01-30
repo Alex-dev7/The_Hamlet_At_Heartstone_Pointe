@@ -161,7 +161,8 @@ const BannerRowCenter = ({ title } : any) => {
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ ease: "circInOut", duration: 1, delay: 1 }}
-          className='text-[1rem]  w-[200px] h-[200px] flex flex-col place-items-center font-medium justify-center    bg-green-600 cursor-pointer hover:bg-[#869AA1] hover:text-white transition-color duration-200  dark:text-black dark:hover:text-white relative'>
+          // className='text-[1.5rem]  w-[200px] h-[200px] ml-4 flex flex-col place-items-center font-medium justify-center  bg-gray-700 cursor-pointer hover:bg-[#869AA1] hover:text-white transition-color duration-200  dark:text-black dark:hover:text-white relative'
+          > 
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -170,10 +171,10 @@ const BannerRowCenter = ({ title } : any) => {
               duration: 1,
               delay: 1.8,
             }}
-            className=""
+            className="ml-[-5rem]"
             >
             <p
-            className="absolute text-[4rem] w-[80vw] flex text-white"
+            className="absolute text-[4.5rem] w-[80vw]  flex text-white"
             >
               The Hamlet at Hearthstone Pointe
             </p>

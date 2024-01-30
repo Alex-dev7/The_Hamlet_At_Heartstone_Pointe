@@ -35,7 +35,7 @@ function Contact() {
           <br/>
           <a href="tel:+15189155569">(123) 4567-891</a>
           <p>
-            Adress: <br/>
+            Address: <br/>
             3259 Lake Shore Dr, Lake George, NY<br/>
             12845
           </p>
