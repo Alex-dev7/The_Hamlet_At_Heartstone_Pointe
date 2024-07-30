@@ -51,9 +51,9 @@ function Exterior() {
         <div className="grid grid-cols-2 gap-2 grid-flow-row ">
           {/* @ts-ignore: Unreachable code error */}  
           {data && data?.images.map((image: string, index: number) => index  % 3 === 0 ?  
-         <Image priority key={index}  onClick={(e) => handleClick(e, index)} className="col-span-2 w-full  object-cover outline  border-4 border-white hover:scale-[102%] transition-all brightness-75 hover:brightness-100 cursor-pointer"  src={image} width={800} height={400} alt="#" /> 
+         <Image priority key={index}  onClick={(e) => handleClick(e, index)} className="col-span-2 w-full  object-cover outline  border-4 border-white hover:scale-[102%] transition-all brightness-75 hover:brightness-100 cursor-zoom-in"  src={image} width={800} height={400} alt="#" /> 
          : 
-         <Image priority key={index}  onClick={(e) => handleClick(e, index)} src={image} alt="#" width={400} height={400} className="border-4 h-[400px] w-full object-cover border-white hover:scale-[102%] transition-all brightness-75 hover:brightness-100 cursor-pointer"/>
+         <Image priority key={index}  onClick={(e) => handleClick(e, index)} src={image} alt="#" width={400} height={400} className="border-4 h-[400px] w-full object-cover cursor-zoom-in border-white hover:scale-[102%] transition-all brightness-75 hover:brightness-100 "/>
                )}
              
        </div>
